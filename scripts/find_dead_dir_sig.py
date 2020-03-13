@@ -24,7 +24,7 @@ def extract_runlog(fpath):
             line = line.split(";")
             update = int(line[0].split(":")[-1].strip())
             score = float(line[1].split(":")[-1].strip())
-            solution = bool(int(line[3].split(":")[-1].strip()))
+            solution = bool(int(line[3].split("?")[-1].strip()))
             values.append({"update":update, "score": score, "solution": solution})
     return values
 
